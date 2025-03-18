@@ -45,15 +45,27 @@ export function HeroSection() {
           </p>
 
           <div className="flex items-center gap-4 mt-8 animate-fade-in-delayed-more">
-            <Button variant="outline" size="icon" className="rounded-full">
+            <Button 
+            variant="outline" 
+            size="icon" 
+            className="rounded-full"
+            onClick={() => window.open("https://github.com/ManuRC2", "_blank")}>
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Button>
-            <Button variant="outline" size="icon" className="rounded-full">
+            <Button 
+            variant="outline" 
+            size="icon" 
+            className="rounded-full"
+            onClick={() => window.open("https://linkedin.com/in/manuelcolusso/", "_blank")}>
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Button>
-            <Button variant="outline" size="icon" className="rounded-full">
+            <Button 
+            variant="outline" 
+            size="icon" 
+            className="rounded-full"
+            onClick={() => window.open("mailto:manuel@colusso.ar", "_blank")}>
               <Mail className="h-5 w-5" />
               <span className="sr-only">Email</span>
             </Button>
