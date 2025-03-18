@@ -15,7 +15,7 @@ interface ParallaxCardProps {
 export function ParallaxCard({
   children,
   className,
-  intensity = 15,
+  intensity = 2,
   perspective = 1000,
   resetOnLeave = true,
 }: ParallaxCardProps) {

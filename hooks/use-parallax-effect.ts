@@ -25,6 +25,7 @@ export function useParallaxEffect({ intensity = 15, perspective = 1000, resetOnL
     // Calculate the position as a percentage of the element's dimensions
     const relativeX = (x / rect.width - 0.5) * 2 // -1 to 1
     const relativeY = (y / rect.height - 0.5) * 2 // -1 to 1
+    console.log(relativeX, relativeY)
 
     setPosition({ x: relativeX, y: relativeY })
   }

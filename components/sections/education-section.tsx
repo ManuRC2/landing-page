@@ -18,7 +18,7 @@ export function EducationSection() {
                 </div>
                 <div>
                   <CardTitle>Computer Science</CardTitle>
-                  <CardDescription>Universidad de Buenos Aires (UBA)</CardDescription>
+                  <CardDescription><a href="https://www.uba.ar/" target="blank">Universidad de Buenos Aires (UBA)</a></CardDescription>
                 </div>
               </CardHeader>
               <CardContent>
@@ -40,7 +40,7 @@ export function EducationSection() {
                 </div>
                 <div>
                   <CardTitle>IT Technician</CardTitle>
-                  <CardDescription>Technical Institute</CardDescription>
+                  <CardDescription><a href="https://ips.edu.ar/" target="blank">Instituto Politecnico Superior</a></CardDescription>
                 </div>
               </CardHeader>
               <CardContent>

@@ -25,11 +25,11 @@ export function AboutSection() {
             <div className="pt-4">
               <h4 className="text-lg font-semibold mb-2">Personal Traits</h4>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="outline">Curious</Badge>
-                <Badge variant="outline">Experimental</Badge>
+                <Badge variant="outline">Innovative</Badge>
+                <Badge variant="outline">Versatile</Badge>
                 <Badge variant="outline">Problem Solver</Badge>
+                <Badge variant="outline">Team-oriented</Badge>
                 <Badge variant="outline">Continuous Learner</Badge>
-                <Badge variant="outline">Detail-oriented</Badge>
               </div>
             </div>
           </div>

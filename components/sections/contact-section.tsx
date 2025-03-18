@@ -46,7 +46,6 @@ export function ContactSection() {
         <SectionHeading title="Contact Me" subtitle="Let's get in touch" />
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <ParallaxCard>
             <Card className="border-primary/20 h-full">
               <CardContent className="p-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -110,7 +109,6 @@ export function ContactSection() {
                 </form>
               </CardContent>
             </Card>
-          </ParallaxCard>
 
           <ParallaxCard>
             <div className="space-y-8 h-full bg-background p-6 rounded-lg border border-primary/20">

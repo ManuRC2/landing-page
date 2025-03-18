@@ -48,7 +48,7 @@ export function HobbiesSection() {
           <TabsContent value="photography" className="mt-6">
             <div className="mb-4">
               <p className="text-muted-foreground">
-                Photography is one of my greatest passions. I enjoy capturing moments, exploring different perspectives,
+                Photography is a big passion of mine. I really enjoy capturing moments, exploring different perspectives,
                 and experimenting with composition and lighting.
               </p>
             </div>
@@ -78,26 +78,26 @@ export function HobbiesSection() {
                   Music has always been an important part of my life. I enjoy discovering new artists and genres, and I
                   find that music helps me focus while coding.
                 </p>
-                <h4 className="text-lg font-semibold mb-2">Favorite Genres</h4>
+                <h4 className="text-lg font-semibold mb-2">Favorite Artists</h4>
                 <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                  <li>Alternative Rock</li>
-                  <li>Electronic</li>
-                  <li>Jazz</li>
-                  <li>Classical</li>
+                  <li>MGMT</li>
+                  <li>Gorillaz</li>
+                  <li>Animal Collective</li>
+                  <li>The Cure</li>
                 </ul>
               </div>
-
-              <Card className="bg-secondary/50 border-primary/20">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-semibold mb-2">Currently Listening To</h4>
+              <Card className="relative bg-secondary/50 bg-[url('/congratulations.jpg')] bg-cover bg-center">
+                <div className="absolute inset-0 bg-black/50 rounded-lg z-0 border border-primary/50"></div>
+                <CardContent className="relative z-10 p-6">
+                  <h4 className="text-lg font-semibold mb-2 text-white">Current Favourite Song</h4>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 bg-primary/20 rounded-md flex items-center justify-center">
                         <Music className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium">Playlist Name</p>
-                        <p className="text-sm text-muted-foreground">Various Artists</p>
+                        <p className="font-medium text-white">Congratulations</p>
+                        <p className="text-sm text-gray-300">MGMT</p>
                       </div>
                     </div>
                   </div>
@@ -110,39 +110,39 @@ export function HobbiesSection() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="md:col-span-2">
                 <p className="text-muted-foreground mb-4">
-                  Video games are a great way for me to unwind and relax. I enjoy both casual and competitive gaming,
-                  and I'm always excited to try new titles.
+                  VPlaying video games is something I genuinely enjoy. I appreciate how they combine relaxation with the chance to learn and improve.
                 </p>
                 <h4 className="text-lg font-semibold mb-2">Favorite Games</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-secondary/30 p-4 rounded-md">
                     <h5 className="font-medium">Strategy</h5>
-                    <p className="text-sm text-muted-foreground">Civilization, Age of Empires</p>
+                    <p className="text-sm text-muted-foreground">Cities Skylines, Mount & blade: Warband</p>
                   </div>
                   <div className="bg-secondary/30 p-4 rounded-md">
                     <h5 className="font-medium">RPG</h5>
-                    <p className="text-sm text-muted-foreground">The Witcher, Skyrim</p>
+                    <p className="text-sm text-muted-foreground">Dark Souls 3, Fallout New Vegas, Terraria</p>
                   </div>
                   <div className="bg-secondary/30 p-4 rounded-md">
-                    <h5 className="font-medium">FPS</h5>
-                    <p className="text-sm text-muted-foreground">Valorant, CS:GO</p>
+                    <h5 className="font-medium">Racing</h5>
+                    <p className="text-sm text-muted-foreground">Forza Horizon, Tokyo Xtreme Racer, NFS Underground</p>
                   </div>
                   <div className="bg-secondary/30 p-4 rounded-md">
                     <h5 className="font-medium">Indie</h5>
-                    <p className="text-sm text-muted-foreground">Hades, Hollow Knight</p>
+                    <p className="text-sm text-muted-foreground">Outer Wilds, Hades, The Binding of Isaac</p>
                   </div>
                 </div>
               </div>
 
               <Card className="bg-secondary/50 border-primary/20">
                 <CardContent className="p-6">
-                  <h4 className="text-lg font-semibold mb-2">Gaming Setup</h4>
+                  <h4 className="text-lg font-semibold mb-2">My setup</h4>
                   <ul className="text-sm text-muted-foreground space-y-2">
-                    <li>Custom PC Build</li>
-                    <li>Mechanical Keyboard</li>
-                    <li>Gaming Mouse</li>
-                    <li>Dual Monitor Setup</li>
-                    <li>Gaming Headset</li>
+                    <li>CPU: Ryzen 5 3600</li>
+                    <li>GPU: EVGA RTX 3080</li>
+                    <li>Keeb: Ajazz AK820 Pro</li>
+                    <li>Mouse: Logitech G502</li>
+                    <li>Monitor: Gigabyte G24F</li>
+                    <li>Headphones: AudioTechnica ATH-M20x</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -153,25 +153,32 @@ export function HobbiesSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <p className="text-muted-foreground mb-4">
-                  I have a deep love for cars - from their engineering and design to the driving experience. I enjoy
-                  learning about different models, their history, and technological innovations.
+                Cars have always caught my interest. I like checking out different models, understanding how they work, and enjoy driving them whenever I can.
                 </p>
-                <h4 className="text-lg font-semibold mb-2">Favorite Car Types</h4>
+                <h4 className="text-lg font-semibold mb-2">Favorite Cars</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-secondary/30 p-4 rounded-md">
-                    <h5 className="font-medium">Sports Cars</h5>
-                    <p className="text-sm text-muted-foreground">Porsche 911, Audi R8</p>
+                    <h5 className="font-medium">Dream cars</h5>
+                    <p className="text-sm text-muted-foreground">Integra Type R, GTR R35</p>
                   </div>
                   <div className="bg-secondary/30 p-4 rounded-md">
-                    <h5 className="font-medium">Classics</h5>
-                    <p className="text-sm text-muted-foreground">Ford Mustang, Jaguar E-Type</p>
+                    <h5 className="font-medium">Realistic dream cars</h5>
+                    <p className="text-sm text-muted-foreground">Civic EJ1, BMW E36</p>
+                  </div>
+                  <div className="bg-secondary/30 p-4 rounded-md">
+                    <h5 className="font-medium">Old sports cars</h5>
+                    <p className="text-sm text-muted-foreground">Acura NSX, Carrera GT</p>
+                  </div>
+                  <div className="bg-secondary/30 p-4 rounded-md">
+                    <h5 className="font-medium">Modern sports cars</h5>
+                    <p className="text-sm text-muted-foreground">GT3 RS, Audi R8</p>
                   </div>
                 </div>
               </div>
 
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/camellia_ej1.jpg"
                   alt="Car photography"
                   fill
                   className="object-cover"
