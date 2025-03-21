@@ -26,6 +26,8 @@ const nextConfig = {
     buildActivityPosition: 'bottom-left',
     appIsrStatus: false,
   },
+  output: "export",
+  basePath: '/landing-page'
 }
 
 mergeConfig(nextConfig, userConfig)
