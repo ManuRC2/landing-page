@@ -77,9 +77,9 @@ export function SkillsSection() {
       skills: [
         { name: "Progressive Web Apps", level: "Advanced" },
         { name: "KivyMD", level: "Advanced" },
-        { name: "React Native", level: "Basic" },
-        { name: "Mobile UI Design", level: "Intermediate" },
         { name: "Kotlin Multiplatform", level: "Basic" },
+        { name: "Mobile UI Design", level: "Intermediate" },
+        { name: "React Native", level: "Basic" },
       ],
     },
   ]
