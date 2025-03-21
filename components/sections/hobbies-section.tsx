@@ -13,12 +13,12 @@ export function HobbiesSection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const photos = [
-    { src: "/landing-page/foto2.JPG", alt: "Landscape photography" },
-    { src: "/landing-page/foto3.JPG", alt: "Portrait photography" },
-    { src: "/landing-page/foto4.JPG", alt: "Street photography" },
-    { src: "/landing-page/foto6.JPG", alt: "Nature photography" },
-    { src: "/landing-page/foto7.JPG", alt: "Urban photography" },
-    { src: "/landing-page/foto8.JPG", alt: "Architecture photography" },
+    { src: "/landing-page/foto2.JPG", alt: "Foto 1" },
+    { src: "/landing-page/foto3.JPG", alt: "Foto 2" },
+    { src: "/landing-page/foto4.JPG", alt: "Foto 3" },
+    { src: "/landing-page/foto6.JPG", alt: "Foto 4" },
+    { src: "/landing-page/foto7.JPG", alt: "Foto 5" },
+    { src: "/landing-page/foto8.JPG", alt: "Foto 6" },
   ]
 
   return (
