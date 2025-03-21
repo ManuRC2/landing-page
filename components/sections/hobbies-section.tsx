@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
 import { Camera, Music, Gamepad2, Car } from "lucide-react"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import { DialogTitle } from "@radix-ui/react-dialog"
 
 export function HobbiesSection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -62,6 +63,7 @@ export function HobbiesSection() {
                     </div>
                   </DialogTrigger>
                   <DialogContent className="max-w-3xl">
+                    <DialogTitle></DialogTitle>
                     <div className="relative h-[80vh] w-full">
                       <Image src={photo.src || "/placeholder.svg"} alt={photo.alt} fill className="object-contain" />
                     </div>
