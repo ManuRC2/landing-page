@@ -27,7 +27,6 @@ const nextConfig = {
     appIsrStatus: false,
   },
   output: "export",
-  basePath: '/landing-page'
 }
 
 mergeConfig(nextConfig, userConfig)

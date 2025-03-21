@@ -13,12 +13,12 @@ export function HobbiesSection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const photos = [
-    { src: "/landing-page/foto2.JPG", alt: "Foto 1" },
-    { src: "/landing-page/foto3.JPG", alt: "Foto 2" },
-    { src: "/landing-page/foto4.JPG", alt: "Foto 3" },
-    { src: "/landing-page/foto6.JPG", alt: "Foto 4" },
-    { src: "/landing-page/foto7.JPG", alt: "Foto 5" },
-    { src: "/landing-page/foto8.JPG", alt: "Foto 6" },
+    { src: "/foto2.JPG", alt: "Foto 1" },
+    { src: "/foto3.JPG", alt: "Foto 2" },
+    { src: "/foto4.JPG", alt: "Foto 3" },
+    { src: "/foto6.JPG", alt: "Foto 4" },
+    { src: "/foto7.JPG", alt: "Foto 5" },
+    { src: "/foto8.JPG", alt: "Foto 6" },
   ]
 
   return (
@@ -88,7 +88,7 @@ export function HobbiesSection() {
                   <li>The Cure</li>
                 </ul>
               </div>
-              <Card className="relative bg-secondary/50 bg-[url('/landing-page/congratulations.jpg')] bg-cover bg-center">
+              <Card className="relative bg-secondary/50 bg-[url('/congratulations.jpg')] bg-cover bg-center">
                 <div className="absolute inset-0 bg-black/50 rounded-lg z-0 border border-primary/50"></div>
                 <CardContent className="relative z-10 p-6">
                   <h4 className="text-lg font-semibold mb-2 text-white">Current Favourite Song</h4>
@@ -180,7 +180,7 @@ export function HobbiesSection() {
 
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
-                  src="/landing-page/camellia_ej1.jpg"
+                  src="/camellia_ej1.jpg"
                   alt="Car photography"
                   fill
                   className="object-cover"
