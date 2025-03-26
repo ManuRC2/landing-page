@@ -18,7 +18,7 @@ export function HeroSection() {
   }, [])
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contact")
+    const contactSection = document.getElementById("about")
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" })
     }

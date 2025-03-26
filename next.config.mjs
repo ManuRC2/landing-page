@@ -21,11 +21,7 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-  devIndicators: {
-    buildActivity: false,
-    buildActivityPosition: 'bottom-left',
-    appIsrStatus: false,
-  },
+  devIndicators: false,
   output: "export",
 }
 
