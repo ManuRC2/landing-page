@@ -8,8 +8,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { SectionHeading } from "@/components/ui/section-heading"
 import { Card, CardContent } from "@/components/ui/card"
-import { ParallaxCard } from "@/components/ui/parallax-card"
-import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react"
+import { Github, Linkedin, LoaderCircle, Mail, MapPin, Send, Check } from "lucide-react"
+import { toast } from "sonner"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -18,28 +18,64 @@ export function ContactSection() {
     message: "",
   })
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(0)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
+  function isSubmittingToHTML(isSubmitting: number) {
+    switch (isSubmitting) {	
+      case 0:
+        return <>
+        <span className="mr-2">Send Message</span>
+        <Send className="h-4 w-4" />
+      </>
+      case 1:
+        return <>
+        <span className="mr-2">Sending...</span>
+        <LoaderCircle className="h-4 w-4 animate-spin" />
+      </>
+      case 2:
+        return <>
+        <span className="mr-2">Message sent!</span>
+        <Check className="h-4 w-4" />
+      </>
+         
+    }
+  }
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
+    setIsSubmitting(1)
 
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500)) // TODO
+    const formElement = e.target as HTMLFormElement;
+    const formData = new FormData(formElement);
 
+    formData.append("access_key", "790481e3-5d52-4067-abee-009b23fa1276");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+      
     // Reset form
-    // setFormData({ name: "", email: "", message: "" })
-    setIsSubmitting(false)
+    setFormData({ name: "", email: "", message: "" })
 
-    // Show success message (in a real app, you'd use a toast or alert)
-    // alert("Message sent successfully!") // TODO
-    alert("This form doesn't currently work. Please contact me through another of the available methods. Thank!")
+    if (data.success) {
+      setIsSubmitting(2)
+      await new Promise((resolve) => setTimeout(resolve, 2000))
+    } else {
+      toast.error("Error when sending the message. Please try again later.");
+    }
+    setIsSubmitting(0)
   }
+  
 
   return (
     <section id="contact" className="py-20 bg-secondary/10">
@@ -94,18 +130,8 @@ export function ContactSection() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? (
-                    <>
-                      <span className="mr-2">Sending...</span>
-                      <Send className="h-4 w-4 animate-pulse" />
-                    </>
-                  ) : (
-                    <>
-                      <span className="mr-2">Send Message</span>
-                      <Send className="h-4 w-4" />
-                    </>
-                  )}
+                <Button type="submit" className="w-full" disabled={isSubmitting == 1}>
+                  {isSubmittingToHTML(isSubmitting)}
                 </Button>
               </form>
             </CardContent>
@@ -171,7 +197,7 @@ export function ContactSection() {
                 I'm currently open to freelance opportunities and interesting projects. Feel free to reach out if
                 you'd like to collaborate or discuss potential work.
               </p>
-              <p className="text-muted-foreground mt-2">Response time: Usually within 24-48 hours</p>
+              <p className="text-muted-foreground mt-2">Response time: Within 24 hours</p>
             </div>
           </div>
         </div>
